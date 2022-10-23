@@ -58,6 +58,7 @@ namespace AWMWfm.Controllers
         [Route("PlatformSetting")]
         public IActionResult AddPlatformSetting([FromBody] PlatformSettings setting)
         {
+            //testing
             setting.Id = Guid.NewGuid().ToString();
             _awmService.AddPlatfromSetting(setting);
             return StatusCode(StatusCodes.Status201Created);
